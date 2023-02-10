@@ -60,3 +60,34 @@ print(check_duplicates(fruits))
 print(check_duplicates(names))
 
 
+# Write a function called register_check that checks how many students are in school. The function takes a dictionary as a parameter. 
+#If the student is in school, the dictionary says ‘yes’. If the student is not in school, the dictionary says ‘no’. 
+#Your function should return the number of students in school. Use the dictionary below. Your function should return 3.
+
+def register_check(d : dict):
+    count = 0
+    for i in d.values():
+        if i == 'yes':
+            count += 1
+    return print('The number of students in school are', count)
+
+register = {'Micheal': 'yes',
+           'John': 'no',
+           'Peter': 'yes',
+           'Mary': 'yes'}
+register_check(register)
+
+
+#names = ["kerry", "dickson", "John", "Mary",  "carol", "Rose", "adam"]You are given a list of names above. This list is made up of names of lowercase 
+#and uppercase letters. Your task is to write a code that will return a tuple of all the names in the list that have onlylowercase letters. 
+#Your tuple should have names sorted alphabetically in descending order. Using the list above, your code should return:('kerry', 'dickson', 'carol', 'adam'
+
+names = ["kerry", "dickson", "John", "Mary",  "carol", "Rose", "adam"]
+lower_case_letters = []
+for name in sorted(names, reverse = True):
+    #To sort names in descending order
+    if name.islower():
+        lower_case_letters.append(name)
+        tuple_names = tuple(lower_case_letters)
+        
+print(tuple_names)
