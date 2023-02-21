@@ -207,4 +207,33 @@ def s_names(l: list):
 print(s_names(names))
 
 
+# Write a function called odd_even that has one parameter andtakes a list of numbers as an argument. 
+#The function returns the difference between the largest even number in the list and the smallest odd number in the list. 
+#For example, if you pass [1,2,4,6] as an argument the function should return 6 -1= 5
+
+def odd_even(l : list):
+    large_even_num = max(filter(lambda x:x%2 == 0, l))
+    small_odd_num = max(filter(lambda x:x%2 != 0, l))
+    return (large_even_num - small_odd_num)
+
+l = [1,2,4,6]
+print(odd_even(l))
+
+
+# Write a function called prime_numbers. This function asks a user to enter a number (integer) as an argument and returns a list of all the prime numbers within its range. 
+#For example, if user enters 10, your code should return [2, 3, 5, 7] as prime numbers.
+
+def prime_numbers():
+    n = int(input('Enter a number: '))
+    prime_num = []
+    for i in range(0, n+1):
+        if i > 1:
+            for j in range(2, i):
+                if i % j == 0:
+                    break
+            else:
+                prime_num.append(i)
+    return prime_num
+print(prime_numbers())
+
 
