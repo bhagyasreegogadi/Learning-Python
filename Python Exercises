@@ -297,3 +297,34 @@ def convert_numbers(n):
 
 numbers = [1000000, 2356989, 2354672, 9878098]
 print(convert_numbers(numbers))
+
+
+# Write a function called equal_strings. The function takes two strings as arguments and compares them. If the strings are equal (if they have the same characters and 
+#have equal length), it should return True, if they are not, it should return False. For example, ‘love’ and ‘evol’ should return True. 
+
+def equal_strings(s1:str, s2:str):
+    s1 = sorted(s1)
+    s2 = sorted(s2)
+    if s1 == s2:
+        return 'true'
+    else:
+        return 'false'
+
+s1 = 'bhagya'
+s2 = 'kavya'
+
+print(equal_strings(s1,s2))
+            
+
+# Write a function called swap_values. This function takes a list of numbers and swaps the first element with the last element. 
+#For example, if you pass [2, 4,67, 7] as a parameter, your function should return[7, 4, 67, 2].
+
+def swap_values(l : list):
+    temp = l[0]
+    l[0] = l[-1]
+    l[-1] = temp
+    return l
+l = [2,4,67,7]
+print(swap_values(l))
+
+
